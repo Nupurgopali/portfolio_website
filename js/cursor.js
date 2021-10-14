@@ -1,6 +1,14 @@
 let innercursor=document.querySelector(".inner-cursor");
 let outercursor=document.querySelector(".outer-cursor");
 
+jQuery(document).ready(function($) {
+    {
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
+        $('.inner-coursor').remove();
+        $('.outer-cursor').remove();
+    }
+    }
+    });
 document.addEventListener('mousemove',moveCursor);
 
 function moveCursor(e){
